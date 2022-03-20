@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Img from '../assets/images/headset.png';
 import DeleteIcon from './DeleteIcon';
 import MinusIcon from './MinusIcon';
 import PlusIcon from './PlusIcon';
 
 const ProductCard = () => {
+    const[count,setCount]=useState(0);
   return (
     <div className='flex items-start gap-5 bg-[#1F1F1F] relative my-[60px]'>
         <div className='h-full p-3 bg-[#262626] rounded-[10px] flex items-center justify-center'>
@@ -19,11 +20,14 @@ const ProductCard = () => {
 
     </div>
     <div className='flex items-center gap-2'>
-        <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'>
+        <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
+        onClick={()=>{
+            count>0 ? setCount(count-1):setCount(0)}}>
             <MinusIcon className='text-white group-hover:text-[#262626]'/>
             </span>
-            <span className='text-white font-semibold text-lg'>1</span>
-            <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'>
+            <span className='text-white font-semibold text-lg'>{count<0 ? 0 : count}</span>
+            <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
+            onClick={()=>setCount(count+1)}>
             <PlusIcon className='text-white group-hover:text-[#262626]'/>
             </span>
 
