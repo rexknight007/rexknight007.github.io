@@ -1,24 +1,18 @@
-import logo from './logo.svg';
-import './App.css';
+import React from 'react';
+import Header from './components/Header';
+import ProductCard from './components/ProductCard';
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div class='w-screen h-screen flex items-center justify-center'>
+    <div class='w-[414px] h-[896px] bg-[#1F1F1F] rounded-[30px] flex flex-col py-12 px-[30px]'>
+      <Header/>
+      <ProductCard/>
+      
     </div>
+  </div>
+    
   );
 }
 
