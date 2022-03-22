@@ -1,14 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Img from '../assets/images/headset.png';
 import DeleteIcon from './DeleteIcon';
 import MinusIcon from './MinusIcon';
 import PlusIcon from './PlusIcon';
 
-const ProductCard = () => {
-    const[count,setCount]=useState(0);
+const ProductCard = ({count,setCount}) => {
+    
   return (
     <div className='flex items-start gap-5 bg-[#1F1F1F] relative my-[60px]'>
-        <div className='h-full p-3 bg-[#262626] rounded-[10px] flex items-center justify-center'>
+        <div className='h-full p-3 bg-[#262626] rounded-[10px] flex items-center justify-center shadow prodImg'>
             <img src={Img} alt=''/>
 </div>
 <div className='flex flex-col justify-between h-full'>
