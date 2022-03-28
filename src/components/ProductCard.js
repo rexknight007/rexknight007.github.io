@@ -22,10 +22,10 @@ const ProductCard = ({count,setCount}) => {
     <div className='flex items-center gap-2'>
         <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
         onClick={()=>{
-            count>0 ? setCount(count-1):setCount(0)}}>
+            count>1 && setCount(count-1)}}>
             <MinusIcon className='text-white group-hover:text-[#262626]'/>
             </span>
-            <span className='text-white font-semibold text-lg'>{count<0 ? 0 : count}</span>
+            <span className='text-white font-semibold text-lg'>{ count}</span>
             <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
             onClick={()=>setCount(count+1)}>
             <PlusIcon className='text-white group-hover:text-[#262626]'/>
