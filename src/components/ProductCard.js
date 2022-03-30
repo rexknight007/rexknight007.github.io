@@ -7,7 +7,7 @@ import PlusIcon from './PlusIcon';
 const ProductCard = ({count,setCount}) => {
     
   return (
-    <div className='flex items-start gap-5 bg-[#1F1F1F] relative my-[60px]'>
+    <div className='flex items-start gap-5 bg-[#1F1F1F] relative my-[60px] '>
         <div className='h-full p-3 bg-[#262626] rounded-[10px] flex items-center justify-center  customShadow'>
             <img src={Img} alt=''/>
 </div>
@@ -19,14 +19,14 @@ const ProductCard = ({count,setCount}) => {
         
 
     </div>
-    <div className='flex items-center gap-2'>
-        <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
+    <div className='flex items-center gap-2 mt-4'>
+        <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all  customShadow duration-300 ease-linear'
         onClick={()=>{
             count>1 && setCount(count-1)}}>
             <MinusIcon className='text-white group-hover:text-[#262626]'/>
             </span>
             <span className='text-white font-semibold text-lg'>{ count}</span>
-            <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all duration-300 ease-linear'
+            <span className='bg-[#262626] rounded-[3px] group hover:bg-white w-5 h-5 flex items-center justify-center cursor-pointer transition-all  customShadow duration-300 ease-linear'
             onClick={()=>setCount(count+1)}>
             <PlusIcon className='text-white group-hover:text-[#262626]'/>
             </span>
